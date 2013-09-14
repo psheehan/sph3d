@@ -1,0 +1,4 @@
+g++ -c -fopenmp -O3 -fPIC sph3d.cc -o sph3d.o
+g++ -g -fopenmp -shared -Wl,-dylib_install_name,libsph3d.so -o libsph3d.so sph3d.o
+
+rm sph3d.o
